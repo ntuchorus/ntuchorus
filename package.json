@@ -1,0 +1,32 @@
+{
+  "name": "ntu-chorus",
+  "version": "0.0.1",
+  "description": "NTU Chorus Website",
+  "scripts": {
+    "build": "npm install && npm run generate",
+    "clean": "rm -Rf _site/*",
+    "dev": "npm run serve",
+    "generate": "bundle exec jekyll build --config _config.yml",
+    "serve": "bundle exec jekyll serve --config _config.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/numenta/numenta.org.git"
+  },
+  "keywords": [
+    "NTUChorus",
+    "Sing"
+  ],
+  "author": "Yun-Chih Chen",
+  "devDependencies": {
+    "gulp-compass": "~2.1.0",
+    "gulp-cssmin": "~0.1.7",
+    "gulp-rename": "~1.2.2",
+    "gulp-concat": "~2.6.0",
+    "gulp-watch": "~4.3.4",
+    "gulp-clean": "~0.3.1"
+  },
+  "dependencies": {
+    "gulp": "~3.9.0"
+  }
+}

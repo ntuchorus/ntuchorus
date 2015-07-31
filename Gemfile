@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+gem 'compass'
+gem 'kramdown'
+gem 'jekyll'
+gem 'bootstrap-sass'
+# gem 'jekyll-multiple-languages-plugin'

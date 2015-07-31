@@ -1,0 +1,48 @@
+
+
+<section id="performance" class="bg-light-gray panel">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3>{{ site.performance.subtitle }}</h3>
+				<h1 id="performance-title">{{ site.performance.title }}</h1>
+            </div>
+        </div>
+        <div class="row">
+        	<ul class="col-lg-12 " id="performance-info">
+        		<li>
+        			<i class="fa fa-calendar fa-lg"></i>
+        			{{ site.performance.date }}
+        		</li>
+        		<li>
+        			<i class="fa fa-map-marker fa-lg"></i>
+        			{{ site.performance.place }}
+                    <div id="map_label">
+                        (
+                        <i class="fa fa-external-link"></i>
+                        <a  data-toggle="modal" data-target="#map_model" style="cursor: pointer">地圖</a>
+                        )
+                    </div>
+        		</li>
+        		
+                <li>
+                    票價：
+                    {% for item in site.performance.ticket %}
+                        <span class="label label-default">{{ item.price }}</span> 
+                    {% endfor %}
+                </li>
+        	</ul>
+        	{% include util/map_modal.html %}
+
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <p class="large text-muted">
+					{% include util/markdown.html file='performance.md' %}
+                </p>
+                <a href="{{ site.performance.ticket_vendor }}" id="order_ticket" class="btn btn-danger grow">立刻買票</a>
+                
+            </div>
+
+            
+        </div>
+    </div>
+</section>

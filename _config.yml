@@ -1,0 +1,94 @@
+url: https://y7kim.github.io
+baseurl: 
+
+# Site settings
+title: 台大合唱團
+email: b03902074@ntu.edu.tw
+description: "台大合唱團是台灣大學學生合唱團，由眾多年輕的合唱愛好者所組成。團員具有優秀的領悟力及可塑性，並且對於音樂充滿高度的熱忱；不僅勇於嘗試各種曲目，演出形式更力求創新，搭配舞台燈光與肢體動作設計，帶給觀眾更豐富的視聽感受。"
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: fed136
+  secondary: fec503  
+  secondary-dark: 333
+  ternary: fff
+
+# Team names, titles and social links
+people:
+- name: 連芳貝
+  pic: conductor
+  position: 指揮
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus 
+      url: #
+
+- name: 謝欣容
+  pic: piano-companion
+  position: 伴奏
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+
+- name: 董皓文
+  pic: vice-conductor-dong
+  position: 學生指揮
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus 
+      url: #
+
+- name: 紀揚今
+  pic: vice-conductor-chin
+  position: 學生指揮
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+
+
+performance:
+  title: 青春當青
+  subtitle: 台大合唱團 2015 夏季公演
+  date: 2015 七月一日 禮拜三
+  place: 新北市三重區綜合體育館演藝廳
+  map_url: www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.150077056266!2d121.48978899999997!3d25.062901999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a8e049be5471%3A0xc0496d5e6358b3cf!2z5LiJ6YeN5Y2A57ac5ZCI6auU6IKy6aSo!5e0!3m2!1szh-TW!2stw!4v1438249381505
+  ticket_vendor: www.artsticket.com.tw/CKSCC2005/Product/Product00/ProductsDetailsPage.aspx?ProductID=oK4bYlG1Gfw8fsQDC%2FQ7Iw
+  ticket:
+    - price: 300
+    - price: 500
+    - price: 800
+    - price: 1000
+
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: http://twitter.com/jekyllrb
+  - title: facebook
+    url: https://www.facebook.com/NTUChorus
+  - title: stack-overflow
+
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: 3481 Melrose Place
+  - line: Beverly Hills, CA 90210
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+exclude: [vendor]
