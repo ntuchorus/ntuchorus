@@ -92,3 +92,6 @@ address:
 markdown: kramdown
 permalink: pretty
 exclude: [vendor]
+port: 4444
+# sass:
+#     sass_dir: _includes/sass
