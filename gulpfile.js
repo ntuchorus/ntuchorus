@@ -11,6 +11,7 @@ gulp.task('compass', function() {
 
   var stylesheet = "_includes/sass/style.scss";
   exec('bundle exec compass compile ' + stylesheet , function(err, stdout, stderr) {
+   
         console.log(stdout);
   });
 
@@ -29,7 +30,7 @@ gulp.task('clean-css', function () {
         .pipe(clean());
 });
 
-gulp.task('jekyll', function () {
+gulp.task('jekyll',['compass'], function () {
 
     exec('bundle exec jekyll serve', function(err, stdout, stderr) {
         console.log(stdout);
@@ -42,7 +43,7 @@ gulp.task('css', ['concat-css', 'minify-css']);
 // Watch for changes
 gulp.task('watch', function () {
 
-    gulp.watch('_includes/scss/*.scss', ['compass']);
+    gulp.watch('_includes/sass/*.scss', ['compass']);
 
     gulp.watch(['*.html', '*/*.html', '*/*.md', '_includes/css/*.css', '!_site/**', '!_site/*/**'], ['jekyll']);
 
@@ -50,4 +51,4 @@ gulp.task('watch', function () {
 
 gulp.task('production', ['css', 'jekyll', 'watch']); 
 
-gulp.task('dev', ['compass','jekyll', 'watch']); 
+gulp.task('dev', ['jekyll', 'watch']); 
