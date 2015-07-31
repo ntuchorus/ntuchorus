@@ -43,7 +43,7 @@ gulp.task('css', ['concat-css', 'minify-css']);
 // Watch for changes
 gulp.task('watch', function () {
 
-    gulp.watch('_includes/sass/*.scss', ['compass']);
+    gulp.watch('_includes/sass/**/*.scss', ['compass']);
 
     gulp.watch(['*.html', '*/*.html', '*/*.md', '_includes/css/*.css', '!_site/**', '!_site/*/**'], ['jekyll']);
 

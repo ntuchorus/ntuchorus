@@ -2,11 +2,11 @@
 ---
 
 
-jQuery(document).ready(function(){
-    jQuery("#team-intro").click(function(){
-        $('#team-intro').addClass('bounce');
-    });
-});
+// jQuery(document).ready(function(){
+//     jQuery("#team-intro").click(function(){
+//         $('#team-intro').addClass('bounce');
+//     });
+// });
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
