@@ -1,0 +1,63 @@
+
+// -----------------------------------------------------------------------------
+// Primary Palette
+// -----------------------------------------------------------------------------
+
+$darkblue                  : #142b44 !default;
+$navblue                   : #1d508d !default;
+$lpblue                    : #297CBB !default;
+$linkblue                  : #288ad6 !default;
+$teal                      : #0FDEBD !default;
+$green                     : #16c98d !default;
+$yella                     : #feef6d !default;
+$orange                    : #ffc83f !default;
+$red                       : #fa5e5b !default;
+$plum                      : #bf538d !default;
+
+
+// -----------------------------------------------------------------------------
+// Secondary Palette
+// -----------------------------------------------------------------------------
+
+$mauve                     : #684e79 !default;
+$pink                      : #ff708e !default;
+$darkcyan                  : #47a899 !default;
+$softblue                  : #8abee5 !default;
+$softgreen                 : #c7e6aa !default;
+$beige                     : #cfcbaf !default;
+$maroon                    : #582c2b !default;
+$darkred                   : #841e1b !default;
+
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:              #000;
+$gray-darker:            lighten($gray-base, 13.5%); // #222
+$gray-dark:              lighten($gray-base, 20%)  ; // #333
+$gray:                   lighten($gray-base, 33.5%); // #555
+$gray-light:             lighten($gray-base, 46.7%); // #777
+$gray-lighter:           lighten($gray-base, 93.5%); // #eee
+
+
+
+$brand-primary:         $orange;
+$brand-success:         $green;
+$brand-info:            $linkblue;
+$brand-warning:         $red;
+$brand-danger:          $darkred;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+// $body-bg:               #fff
+//** Global text color on `<body>`.
+// $text-color:            $gray-dark
+
+//** Global textual link color.
+$link-color:            $brand-primary;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%);
+//** Link hover decoration.
+// $link-hover-decoration: underline
+

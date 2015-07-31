@@ -1,16 +1,13 @@
 @import 'config';
+@import "compass/css3/transition";
+@import "compass/css3/opacity";
 /*!
  * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-body {
-    overflow-x: hidden;
-    font-family: "Microsoft JhengHei","LiHei Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: $secondary-dark;
-    letter-spacing: 1.5px;
-}
+
 
 .text-muted {
     color: #777;
@@ -21,8 +18,8 @@ body {
 }
 
 p {
-    font-size: 14px;
-    line-height: 1.75;
+    font-size: $font-size-base;
+    line-height: $font-size-large;
 }
 
 p.large {
@@ -67,7 +64,7 @@ h2 {
 h3 {
     letter-spacing: 5px;
 }
-h1 {
+h4 {
     letter-spacing: 3px;
 }
 .img-centered {
@@ -150,7 +147,7 @@ fieldset[disabled] .btn-primary.active {
 .open .dropdown-toggle.btn-xl {
     border-color: $primary-bright;
     color: $secondary-dark;
-    background-color: $secondary-bright;
+    background-color: darken($primary-bright, 15%); 
 }
 
 .btn-xl:active,
@@ -223,7 +220,7 @@ fieldset[disabled] .btn-xl.active {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    color: $secondary-dark;
+    color: $secondary-bright;
 }
 
 .navbar-default .nav li a:hover,
@@ -256,9 +253,8 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default .navbar-brand {
         font-size: 2em;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
+        @include transparent;
+        @include transition(opacity, 0.3s ease-out);
     }
 
     .navbar-default .navbar-nav>.active>a {
@@ -269,17 +265,18 @@ fieldset[disabled] .btn-xl.active {
         padding: 10px 0;
         background-color: #222;
     }
-
+    
     .navbar-default.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
+        font-size: 2em;
+        opacity: 1;
     }
 }
 
 header {
     text-align: center;
-    color: $secondary-dark;
+    color: $secondary-bright;
     background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
+    background-image: url(../../img/header-bg.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -852,24 +849,6 @@ ul.social-buttons li a:active {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-}
-
-::-moz-selection {
-    text-shadow: none;
-    background: $primary-bright;
-}
-
-::selection {
-    text-shadow: none;
-    background: $primary-bright;
-}
-
-img::selection {
-    background: 0 0;
-}
-
-img::-moz-selection {
-    background: 0 0;
 }
 
 body {

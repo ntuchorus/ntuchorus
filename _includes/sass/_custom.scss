@@ -1,4 +1,18 @@
 @import 'config';
+@import "compass/css3/selection";
+@import 'animate';
+@include animate-bounce($class:true);
+
+
+* {
+  @include selection(null, $linkblue)
+}
+
+body {
+    overflow-x: hidden;
+    color: $secondary-dark;
+    letter-spacing: 1.5px;
+}
 
 #performance {
 	min-height: 100%;
@@ -14,7 +28,7 @@
 }
 
 #performance-title {
-	color: $primary-bright ; 
+	// color: $primary-bright ; 
 	font-size: 55px;
 }
 
@@ -24,5 +38,7 @@
 #order_ticket {
 	margin-top: 20px;
 }
+
+
 
 

@@ -10,7 +10,8 @@ js/boostrap/*
 
 # Files
 LICENSE
-
+feed.xml
+Gemfile.lock
 
 # Windows image file caches
 Thumbs.db
