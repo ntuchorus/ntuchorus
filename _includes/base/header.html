@@ -40,7 +40,7 @@
 
  <!-- Introduction Section -->
     <header>
-        <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+        <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="3000" id="header-carousel">
               <!-- Overlay -->
               <div class="overlay"></div>
 
@@ -50,7 +50,9 @@
                   <!-- Make the first slide active and the rest of the slides inactive -->
                   {% assign active = "active" %}
                   {% for intro in site.data.header-intro %}
-                    <li data-target="#bs-carousel" data-slide-to="{% increment index1 %}" class="{{ active }}"></li>
+                    <li data-target="#header-carousel" data-slide-to="{% increment index1 %}" class="{{ active }}">
+                      <div>some text</div>
+                    </li>
                     {% if active != null %}
                         {% assign active = null %}
                     {% endif %}

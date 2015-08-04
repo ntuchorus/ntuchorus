@@ -13,7 +13,7 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
+$font-family-sans-serif:  Montserrat,"Helvetica Neue",Helvetica, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 // $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace
@@ -49,12 +49,12 @@ $headings-color:          inherit;
 
 // [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
 // [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
-// $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/")
+// $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/");
 
 //** File name for all font files.
-// $icon-font-name:          "glyphicons-halflings-regular"
+// $icon-font-name:          "glyphicons-halflings-regular";
 //** Element ID within SVG icon file.
-// $icon-font-svg-id:        "glyphicons_halflingsregular"
+// $icon-font-svg-id:        "glyphicons_halflingsregular";
 
 //== Components
 //
@@ -75,9 +75,9 @@ $headings-color:          inherit;
 // $line-height-large:         1.3333333 // extra decimals for Win 8.1 Chrome
 // $line-height-small:         1.5
 
-// $border-radius-base:        4px;
-// $border-radius-large:       6px;
-// $border-radius-small:       3px;
+$border-radius-base:        4px;
+$border-radius-large:       6px;
+$border-radius-small:       3px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff;
@@ -638,13 +638,13 @@ $component-active-bg:       $brand-primary;
 //##
 
 //** Padding around the thumbnail image
-// $thumbnail-padding:           4px
+$thumbnail-padding:           4px;
 //** Thumbnail background color
-// $thumbnail-bg:                $body-bg
+$thumbnail-bg:                $gray-lighter;
 //** Thumbnail border color
-// $thumbnail-border:            #ddd
+$thumbnail-border:            #ddd;
 //** Thumbnail border radius
-// $thumbnail-border-radius:     $border-radius-base
+$thumbnail-border-radius:     $border-radius-large;
 
 //** Custom text color for thumbnail captions
 // $thumbnail-caption-color:     $text-color

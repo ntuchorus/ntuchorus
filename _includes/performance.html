@@ -1,31 +1,32 @@
 
-<!-- Header -->
+
+{% for performance in site.data.about.performance %}
 <section id="performance">
     <div class="container">
         <div class="intro-text">
-            <div class="intro-lead-in">2015夏季公演</div>
-            <div class="intro-heading">青春當青</div>
-            <a href="#performance-content" class="page-scroll btn btn-xl">更多訊息</a>
+            <div class="intro-lead-in">{{ performance.subtitle }}</div>
+            <div class="intro-heading">{{ performance.title }}</div>
+            <a href="#performance-detail" class="page-scroll btn btn-xl">更多訊息</a>
         </div>
     </div>
 </section>
-<section id="performance-content" class="bg-light-gray panel">
+<section id="performance-detail" class="bg-light-gray panel">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h3>{{ site.performance.subtitle }}</h3>
-				<h1 id="performance-title">{{ site.performance.title }}</h1>
+                <h3>{{ performance.subtitle }}</h3>
+				<h1 id="performance-title">{{ performance.title }}</h1>
             </div>
         </div>
-        <div class="row">
+        <div id="performance-content" class="row">
         	<ul class="col-lg-12 " id="performance-info">
         		<li>
         			<i class="fa fa-calendar fa-lg"></i>
-        			{{ site.performance.date }}
+        			{{ performance.date }}
         		</li>
         		<li>
         			<i class="fa fa-map-marker fa-lg"></i>
-        			{{ site.performance.place }}
+        			{{ performance.place }}
                     <div id="map_label">
                         (
                         <i class="fa fa-external-link"></i>
@@ -36,7 +37,7 @@
         		
                 <li>
                     票價：
-                    {% for item in site.performance.ticket %}
+                    {% for item in performance.ticket %}
                         <span class="label label-default">{{ item.price }}</span> 
                     {% endfor %}
                 </li>
@@ -47,11 +48,12 @@
                 <p class="large text-muted">
 					{% include util/markdown.html file='performance.md' %}
                 </p>
-                <a href="{{ site.performance.ticket_vendor }}" id="order_ticket" class="btn btn-danger grow">立刻買票</a>
+                <a href="{{ performance.ticket_vendor }}" id="order_ticket" class="btn btn-danger grow">立刻買票</a>
                 
             </div>
-
-            <img id="performance-logo" src="img/performance/cover.gif" alt="">
+            <img id="performance-logo" src="img/performance/cover.gif" alt=""> 
         </div>
+
     </div>
 </section>
+{% endfor %}

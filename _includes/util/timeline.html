@@ -1,0 +1,93 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="section-heading">歷年公演</h2>
+            <h3 class="section-subheading text-muted">我們的歷史 我們的輝煌</h3>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="timeline">
+
+                {% for performance in site.data.history.performance %}
+
+                   {% if body-panel-toggle == "" %}
+                       {% assign body-panel-toggle = "timeline-inverted" %}
+                       {% assign timepanel-toggle = "" %}
+                   {% else %}
+                       {% assign body-panel-toggle = "" %}
+                       {% assign time-panel-toggle = "timeline-inverted" %}
+                   {% endif %}
+
+                        <li class="{{ body-panel-toggle }}">
+
+                            <div class="timeline-image">
+                                <img class="img-responsive" src="{{ performance.image }}" alt="">    
+                            </div>
+                            <div class="timeline-time">
+                                <h3 class="timeline-year">{{ performance.year }}</h3>
+                                <h4 class="timeline-date">{{ performance.date }}</h4>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>{{ performance.title }}</h3>
+                                    <h4 class="subheading">{{ performance.subtitle }}</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        {{ performance.description }}
+                                    </p>
+                                </div>
+                            </div>     
+                        </li> 
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+                                      
+                                      
+                        
+                 
+    
+
+<!--
+<div class="timeline-centered">
+    
+    {% for performance in site.data.history.performance %}
+       {% if panel-toggle == "left" %}
+           {% assign panel-toggle = "right" %}
+            <article class="timeline-entry left-aligned">
+       {% else %}
+           {% assign panel-toggle = "left" %}
+                <article class="timeline-entry">
+       {% endif %}
+                   <div class="timeline-entry-inner">
+                        <time class="timeline-time" datetime="2014-01-10T03:45">
+                            <span>{{ performance.date }}</span> 
+                            <span>{{ performance.year }}</span>
+                        </time>
+                        <div class="timeline-icon bg-success">
+                            <i class="entypo-feather"></i>
+                        </div>
+                        <div class="timeline-label">
+                            <h2>
+                                <a href="{{ performance.url }}">{{ performance.title }}</a> <br/>
+                                <span>{{ performance.subtitle }}</span>
+                            </h2>
+                            <blockquote>
+                                {{ performance.description }}
+                            </blockquote>
+                            <img src="{{ performance.image }}" class="img-responsive img-rounded full-width">
+                        </div>
+                    </div>
+                </article>
+    {% endfor %}
+            </article>
+</div>
+-->
+
+

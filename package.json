@@ -24,7 +24,8 @@
     "gulp-rename": "~1.2.2",
     "gulp-concat": "~2.6.0",
     "gulp-watch": "~4.3.4",
-    "gulp-clean": "~0.3.1"
+    "gulp-clean": "~0.3.1",
+    "glob": "~5.0.14"
   },
   "dependencies": {
     "gulp": "~3.9.0"

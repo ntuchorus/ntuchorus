@@ -6,14 +6,27 @@ var spawn = require('child_process').spawn;
 var rename = require('gulp-rename');
 var clean = require('gulp-clean');
 var exec = require('child_process').exec;
+var findAllFiles = require('glob');
 
 gulp.task('compass', function() {
 
-  var stylesheet = "_includes/sass/style.scss";
-  exec('bundle exec compass compile ' + stylesheet , function(err, stdout, stderr) {
-   
-        console.log(stdout);
+  // var stylesheet = "_includes/sass/style.scss";
+  
+  findAllFiles('_includes/stylesheets/**/!(_)*.scss',{}, function (error, files) {
+      var stylesheets = files.join(' ');
+      console.log("Compiling Sass: " + stylesheets);
+      exec('bundle exec compass compile ' + stylesheets , function(err, stdout, stderr) {
+            console.log(stdout);
+      });
   });
+
+    // gulp.src('./_includes/sass/*.scss')
+    // .pipe(compass({
+      // config_file: './config.rb',
+      // css: 'css',
+      // sass: '_includes/sass'
+    // }))
+    // .pipe(gulp.dest('css'));
 
 });
 
@@ -43,9 +56,9 @@ gulp.task('css', ['concat-css', 'minify-css']);
 // Watch for changes
 gulp.task('watch', function () {
 
-    gulp.watch('_includes/sass/**/*.scss', ['compass']);
+    gulp.watch('_includes/stylesheets/**/*.scss', ['compass']);
 
-    gulp.watch(['*.html', '*/*.html', '*/*.md', '_includes/css/*.css', '!_site/**', '!_site/*/**'], ['jekyll']);
+    gulp.watch(['_data/*.yml', '*.html', '*/*.html','**/**/*.html', '*/*.md', '_includes/css/*.css', '!_site/**', '!_site/*/**'], ['jekyll']);
 
 })
 

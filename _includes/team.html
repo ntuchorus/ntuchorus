@@ -1,4 +1,6 @@
-<!-- Team Section -->
+
+
+
     <section id="team" class="bg-light-gray">
         <div class="container">
             <div class="row">
@@ -8,26 +10,69 @@
                 </div>
             </div>
             <div class="row">
-                {% for member in site.people %}
+                {% for conductor in site.data.about.people.conductors %}
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="img/team/{{ member.pic }}.jpg" class="img-responsive img-circle" alt="">
-                        <h4>{{ member.name }}</h4>
-                        <p class="text-muted">{{ member.position }}</p>
-                        <ul class="list-inline social-buttons">
-                            {% for network in member.social %}
-                            <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a>
-                            {% endfor %}
-
-                        </ul>
+                        <img src="{{ conductor.image }}" class="img-responsive img-circle" alt="">
+                        <h3>{{ conductor.name }}</h3>
+                        <h4 class="text-muted">{{ conductor.identity }}</h4>
                     </div>
                 </div>
                 {% endfor %}
             </div>
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p id="team-intro" class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">行政團隊</h2>
+                    <h3 class="section-subheading text-muted"></h3>
                 </div>
             </div>
+
+            <div class="carousel slide carousel-fade" data-ride="carousel" data-type="multi" data-interval="4000" id="carousel-team">
+              <div class="carousel-inner" data-type="multi">
+                {% assign active = "active" %}
+                {% for member in site.data.about.people.team %}
+                    <div class="item {{ active }}">
+                      <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="thumbnail">
+                            <img src="{{ member.image }}" class="img-responsive">
+                            <div class="caption">
+                                <h3>{{ member.name }}</h3>
+                                <h4>{{ member.position }}</h4>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                {% assign active = "" %}
+                {% endfor %}
+              </div>
+              <a class="left carousel-control" href="#carousel-team" data-slide="prev"><i class="fa fa-angle-left fa-3x"></i></a>
+              <a class="right carousel-control" href="#carousel-team" data-slide="next"><i class="fa fa-angle-right fa-3x"></i></i></a>
+            </div>
+            
+
+
+   <!--  <div class="carousel slide" id="myCarousel">
+        <div class="carousel-inner">
+            {% for member in site.data.about.people.team %}
+            <li class="col-sm-3">
+                <img src="{{ member.image }}" class="img-responsive">
+                <div class="caption">
+                    <h3>{{ member.name }}</h3>
+                    <h4>{{ member.position }}</h4>
+                </div>
+            </li>
+            {% endfor %}
+
         </div>
-    </section>
+       <nav>
+            <ul class="control-box pager">
+                <li><a data-slide="prev" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-left"></i></a></li>
+                <li><a data-slide="next" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-right"></i></li>
+            </ul>
+        </nav>        
+    </div> -->
+
+
+
+
+</section>
