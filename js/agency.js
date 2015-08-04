@@ -1,12 +1,8 @@
----
----
-
-
-// jQuery(document).ready(function(){
-//     jQuery("#team-intro").click(function(){
-//         $('#team-intro').addClass('bounce');
-//     });
-// });
+/*!
+ * Start Bootstrap - Agnecy Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
@@ -17,7 +13,6 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
-    
 });
 
 // Highlight the top nav as scrolling occurs
@@ -40,4 +35,3 @@ $('div.modal').on('show.bs.modal', function() {
 		}
 	}
 });
-
