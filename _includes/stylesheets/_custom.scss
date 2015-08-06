@@ -1,3 +1,4 @@
+
 @import 'config';
 @import "compass/css3/selection";
 
@@ -5,8 +6,9 @@
   @include selection(null, $linkblue)
 }
 
-body {
-    overflow-x: hidden;
+body, html {
+    width: auto !important;
+    overflow-x: hidden !important;
     color: $secondary-dark;
     letter-spacing: 1.5px;
 }
