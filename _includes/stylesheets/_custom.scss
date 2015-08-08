@@ -16,6 +16,10 @@ body, html {
 #performance-content {
     position: relative;
 }
+
+#performance-content > div {
+    z-index: 1;
+}
 #performance-info {
 	float: none;
     margin: 0 auto;
@@ -38,7 +42,7 @@ body, html {
 }
 
 #performance-logo {
-	visibility: hidden;
+    visibility: hidden;
 }
 
 .timeline>li .timeline-image {
@@ -104,6 +108,17 @@ body, html {
     }
 }
 
+.help-link {
+    transition: all .2s ease-in-out;
+}
 
+.help-link:hover {
+    transform: scale(1.1);
+}
+.help-link>span {
+    display: block;
+}
 
-
+// .help-link-text {
+//     color: 
+// }

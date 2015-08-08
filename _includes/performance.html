@@ -48,12 +48,13 @@
                 <p class="large text-muted">
 					{% include util/markdown.html file='performance.md' %}
                 </p>
-                <a href="{{ performance.ticket_vendor }}" id="order_ticket" class="btn btn-danger grow">立刻買票</a>
+                <a target="_blank" href="{{ performance.ticket_vendor }}" id="order_ticket" class="btn btn-danger grow">立刻買票</a>
                 
             </div>
             <img id="performance-logo" src="img/performance/cover.gif" alt=""> 
         </div>
 
+        
     </div>
 </section>
 {% endfor %}

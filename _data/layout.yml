@@ -1,0 +1,12 @@
+navigationBar:
+  - title: 公演
+    url: performance
+  - title: 歷史
+    url: history
+  - title: 團隊
+    url: team
+  - title: 贊助我們
+    url: help
+  - title: 聯絡我們
+    url: contact
+

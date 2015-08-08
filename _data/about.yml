@@ -64,8 +64,8 @@ performance:
   subtitle: 台大合唱團 2015 夏季公演
   date: 2015 七月一日 禮拜三
   place: 新北市三重區綜合體育館演藝廳
-  map_url: www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.150077056266!2d121.48978899999997!3d25.062901999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a8e049be5471%3A0xc0496d5e6358b3cf!2z5LiJ6YeN5Y2A57ac5ZCI6auU6IKy6aSo!5e0!3m2!1szh-TW!2stw!4v1438249381505
-  ticket_vendor: www.artsticket.com.tw/CKSCC2005/Product/Product00/ProductsDetailsPage.aspx?ProductID=oK4bYlG1Gfw8fsQDC%2FQ7Iw
+  map_url: http://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.150077056266!2d121.48978899999997!3d25.062901999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a8e049be5471%3A0xc0496d5e6358b3cf!2z5LiJ6YeN5Y2A57ac5ZCI6auU6IKy6aSo!5e0!3m2!1szh-TW!2stw!4v1438249381505
+  ticket_vendor: http://www.artsticket.com.tw/CKSCC2005/Product/Product00/ProductsDetailsPage.aspx?ProductID=oK4bYlG1Gfw8fsQDC%2FQ7Iw
   ticket:
     - price: 300
     - price: 500

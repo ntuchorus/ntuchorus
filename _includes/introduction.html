@@ -1,0 +1,44 @@
+<!-- Introduction Section -->
+    <header>
+        <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="3000" id="header-carousel">
+              <!-- Overlay -->
+              <div class="overlay"></div>
+
+
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                  <!-- Make the first slide active and the rest of the slides inactive -->
+                  {% assign active = "active" %}
+                  {% for intro in site.data.header-intro %}
+                    <li data-target="#header-carousel" data-slide-to="{% increment index1 %}" class="{{ active }}">
+                      <div>some text</div>
+                    </li>
+                    {% if active != null %}
+                        {% assign active = null %}
+                    {% endif %}
+                  {% endfor %}
+              </ol>
+              
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                    <!-- Make the first slide active and the rest of the slides inactive -->
+                      {% assign active = "active" %}
+                      {% for intro in site.data.header-intro %}
+                            <div class="{{ active }} item slides">
+                              <div class="slide-{% increment index2 %}"></div>
+                              <div class="hero">
+                                <hgroup>
+                                    <h1>{{ intro.title }}</h1>        
+                                    <h3>{{ intro.content }}</h3>
+                                </hgroup>
+                              </div>
+                            </div>
+                        {% if active != null %}
+                            {% assign active = null %}
+                        {% endif %}
+                    
+                     {% endfor %}
+             
+              </div> 
+        </div>
+    </header>

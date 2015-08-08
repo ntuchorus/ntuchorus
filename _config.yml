@@ -16,5 +16,5 @@ color:
 # Build settings
 markdown: kramdown
 permalink: pretty
-exclude: [_posts,vendor,Gemfile*,node_modules,package.json,gulpfile.js,bin,vendor,config.rb]
+exclude: [_posts,vendor,Gemfile*,node_modules,package.json,gulpfile.js,bin,vendor,config.rb,production.sh]
 port: 4444
