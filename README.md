@@ -1,3 +1,4 @@
+
 # NTUChorus
 
 This is the source code for [NTU Chorus](ntuchorus.github.io).
@@ -10,7 +11,7 @@ These partial templates are included by `./index.html` or `./**/index.html` to f
 The content of all HTML, ( for example, the header image, hero text, 
 teacher's information, past performances information
 ) can all be found in `./_data`.  They are then pushed into HTML page by `liquid templates`.  
-An example [here](https://github.com/yunchih/ntuchorus/blob/master/_includes/team.html#L13).
+An example [here](https://github.com/yunchih/ntuchorus/blob/master/_includes/team.html#L13-L21), which includes its content from [`./_data/about.yml`](https://github.com/ntuchorus/ntuchorus/blob/master/_data/about.yml).
 
 All CSS stylesheeets can be found in `./_includes/stylesheets/`.  They're Sass files that will be compiled into CSS 
 ( the outputing CSS will be placed in `./css` )
@@ -35,4 +36,3 @@ See the generated site in your browser at `localhost:4444/`
 ```
 gulp
 ```
-
