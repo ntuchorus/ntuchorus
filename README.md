@@ -39,7 +39,7 @@ gulp
 ### Backend server
 
 We still need a backend server to regenerate the site when user modifies it.
-I've created an account on [Openshift](dev-ntuchorus.rhcloud.com).
+I've created an account on Openshift:[dev-ntuchorus.rhcloud.com](https://dev-ntuchorus.rhcloud.com).
 
 ### Operational Issues
 
