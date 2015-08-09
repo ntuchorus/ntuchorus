@@ -36,3 +36,21 @@ See the generated site in your browser at `localhost:4444/`
 ```
 gulp
 ```
+### Backend server
+
+We still need a backend server to regenerate the site when user modifies it.
+I've created an account on [Openshift](dev-ntuchorus.rhcloud.com).
+
+### Operational Issues
+
+We need an infrastructure where user can quickly preview their modifications and publish them with confidence.
+
+Here's a solution I can think of:
+
+1. User edits in `./_data` via [prose.io](prose.io).
+2. User saves his changes, which trigger a `push` event.
+3. The `push` event trigger a [Github Webhook](https://developer.github.com/webhooks/), which sends a POST request to our own server.
+4. Our own server regenerates the site, pushes the new site to a development Github repository(`dev-ntuchrous.github.io`), which serves only as preview purpose.
+5. Once the user confirms the preview, he can then hit a *publish* button on our preview site.
+6. The button send a request to our server.  Our server push the new site to the final production site ( `ntuchrous.github.io`).
+
