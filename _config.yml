@@ -1,5 +1,6 @@
 url: https://y7kim.github.io
 baseurl: 
+dev: true
 
 # Site settings
 title: 台大合唱團

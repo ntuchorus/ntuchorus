@@ -25,7 +25,8 @@
     "gulp-concat": "~2.6.0",
     "gulp-watch": "~4.3.4",
     "gulp-clean": "~0.3.1",
-    "glob": "~5.0.14"
+    "glob": "~5.0.14",
+    "gulp-livereload": "~3.8.0"
   },
   "dependencies": {
     "gulp": "~3.9.0"
