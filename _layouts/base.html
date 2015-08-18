@@ -4,30 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-
-
-    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
-    
     {% for sheet in page.styles %}
       <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{{ sheet }}" />
     {% endfor %}
     
     <!-- Custom Fonts -->
-    <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-</head>
+    <link rel="stylesheet" href="{{ "/css/vendors/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
     
-
-
+</head>
     
     <body id="page-top" class="index">
        
@@ -40,8 +28,10 @@
             {% include base/browserSync.html %}
         {% endif %}
     </body>
+        
+         <!-- jQuery Version 1.11.0 -->
+        <script src="{{ "/js/vendors/jquery-1.11.3.min.js" | prepend: site.baseurl }}"></script>
 
-        {% include base/js.html %}
         {% for script in page.scripts %}
           <script src="{{ site.baseurl }}{{ script }}"></script>
         {% endfor %}

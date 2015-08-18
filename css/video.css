@@ -1,28 +1,977 @@
-/* line 12, ../_includes/stylesheets/video.scss */
-section {
-  background-color: #000;
-  color: #fed136;
+@charset "UTF-8";
+/* Animations
+============================================================
+========================================================= */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 9, ../_includes/stylesheets/vendors/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
-/* line 21, ../_includes/stylesheets/video.scss */
-.video-panel {
+/**
+ * Remove default margin.
+ */
+/* line 19, ../_includes/stylesheets/vendors/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 33, ../_includes/stylesheets/vendors/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 54, ../_includes/stylesheets/vendors/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 67, ../_includes/stylesheets/vendors/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 77, ../_includes/stylesheets/vendors/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 89, ../_includes/stylesheets/vendors/_normalize.scss */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 97, ../_includes/stylesheets/vendors/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 109, ../_includes/stylesheets/vendors/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 117, ../_includes/stylesheets/vendors/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 126, ../_includes/stylesheets/vendors/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 135, ../_includes/stylesheets/vendors/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 144, ../_includes/stylesheets/vendors/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 153, ../_includes/stylesheets/vendors/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 161, ../_includes/stylesheets/vendors/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
   position: relative;
+  vertical-align: baseline;
 }
 
-/* line 25, ../_includes/stylesheets/video.scss */
-.video-panel > div {
-  position: absolute;
+/* line 169, ../_includes/stylesheets/vendors/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 173, ../_includes/stylesheets/vendors/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 184, ../_includes/stylesheets/vendors/_normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 192, ../_includes/stylesheets/vendors/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 203, ../_includes/stylesheets/vendors/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 211, ../_includes/stylesheets/vendors/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 221, ../_includes/stylesheets/vendors/_normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 229, ../_includes/stylesheets/vendors/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 252, ../_includes/stylesheets/vendors/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 266, ../_includes/stylesheets/vendors/_normalize.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 277, ../_includes/stylesheets/vendors/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 290, ../_includes/stylesheets/vendors/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 302, ../_includes/stylesheets/vendors/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 311, ../_includes/stylesheets/vendors/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 322, ../_includes/stylesheets/vendors/_normalize.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 334, ../_includes/stylesheets/vendors/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 346, ../_includes/stylesheets/vendors/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 357, ../_includes/stylesheets/vendors/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 370, ../_includes/stylesheets/vendors/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 379, ../_includes/stylesheets/vendors/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 390, ../_includes/stylesheets/vendors/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 399, ../_includes/stylesheets/vendors/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 408, ../_includes/stylesheets/vendors/_normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 419, ../_includes/stylesheets/vendors/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 424, ../_includes/stylesheets/vendors/_normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, ../_includes/stylesheets/vendors/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, ../_includes/stylesheets/vendors/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 32, ../_includes/stylesheets/vendors/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 35, ../_includes/stylesheets/vendors/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 38, ../_includes/stylesheets/vendors/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, ../_includes/stylesheets/vendors/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 46, ../_includes/stylesheets/vendors/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 12, ../_includes/stylesheets/base/_base.scss */
+html, body {
+  font-family: Helvetica, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  color: #142b44;
+  background: white;
+  background-image: url("../img/background-pattern2.png");
+}
+
+/* line 22, ../_includes/stylesheets/base/_base.scss */
+a {
+  color: #288ad6;
+  text-decoration: none;
+}
+/* line 25, ../_includes/stylesheets/base/_base.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 28, ../_includes/stylesheets/base/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Microsoft YaHei", sans-serif;
+  color: #1d508d;
+  font-weight: normal;
+  margin-bottom: 5px;
+  text-shadow: #777777 1px 1px;
+}
+
+/* line 36, ../_includes/stylesheets/base/_base.scss */
+h1 {
+  font-size: 48px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #777777;
+  padding-top: 10px;
+  letter-spacing: 3px;
+  line-height: 100%;
+  color: #010101;
+}
+
+/* line 46, ../_includes/stylesheets/base/_base.scss */
+h2 {
+  font-size: 38.4px;
+  line-height: 100%;
+  letter-spacing: 2px;
+  color: #142c45;
+}
+
+/* line 53, ../_includes/stylesheets/base/_base.scss */
+h3 {
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 1px;
+  color: #142c46;
+}
+
+/* line 61, ../_includes/stylesheets/base/_base.scss */
+h4 {
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0.8px;
+  color: #152e48;
+}
+
+/* Slider */
+/* line 3, ../_includes/stylesheets/vendors/slick.scss */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 18, ../_includes/stylesheets/vendors/slick.scss */
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+/* line 25, ../_includes/stylesheets/vendors/slick.scss */
+.slick-list:focus {
+  outline: none;
+}
+/* line 29, ../_includes/stylesheets/vendors/slick.scss */
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 34, ../_includes/stylesheets/vendors/slick.scss */
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 43, ../_includes/stylesheets/vendors/slick.scss */
+.slick-track {
+  position: relative;
   left: 0;
   top: 0;
-  margin: 0 auto;
+  display: block;
+}
+/* line 49, ../_includes/stylesheets/vendors/slick.scss */
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+/* line 55, ../_includes/stylesheets/vendors/slick.scss */
+.slick-track:after {
+  clear: both;
+}
+/* line 59, ../_includes/stylesheets/vendors/slick.scss */
+.slick-loading .slick-track {
+  visibility: hidden;
 }
 
-/* line 32, ../_includes/stylesheets/video.scss */
-#video img {
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0 auto;
+/* line 63, ../_includes/stylesheets/vendors/slick.scss */
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+/* line 67, ../_includes/stylesheets/vendors/slick.scss */
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+/* line 70, ../_includes/stylesheets/vendors/slick.scss */
+.slick-slide img {
   display: block;
-  -webkit-filter: blur(1px) brightness(1.1) saturate(1.1);
-  filter: blur(1px) brightness(1.1) saturate(1.1);
+}
+/* line 73, ../_includes/stylesheets/vendors/slick.scss */
+.slick-slide.slick-loading img {
+  display: none;
+}
+/* line 79, ../_includes/stylesheets/vendors/slick.scss */
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+/* line 83, ../_includes/stylesheets/vendors/slick.scss */
+.slick-initialized .slick-slide {
+  display: block;
+}
+/* line 87, ../_includes/stylesheets/vendors/slick.scss */
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+/* line 91, ../_includes/stylesheets/vendors/slick.scss */
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* line 97, ../_includes/stylesheets/vendors/slick.scss */
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+/* line 40, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-loading .slick-list {
+  background: #fff url('/img/ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url('/fonts/slick.eot');
+  src: url('/fonts/slick.eot?#iefix') format("embedded-opentype"), url('/fonts/slick.woff') format("woff"), url('/fonts/slick.ttf') format("truetype"), url('/fonts/slick.svg#slick') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Arrows */
+/* line 58, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  margin-top: -10px;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+/* line 74, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+/* line 78, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+/* line 82, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+
+/* line 87, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-prev:before, .slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: black;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 97, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-prev {
+  left: -25px;
+}
+/* line 99, ../_includes/stylesheets/vendors/slick-theme.scss */
+[dir="rtl"] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+/* line 103, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-prev:before {
+  content: "←";
+}
+/* line 105, ../_includes/stylesheets/vendors/slick-theme.scss */
+[dir="rtl"] .slick-prev:before {
+  content: "→";
+}
+
+/* line 111, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-next {
+  right: -25px;
+}
+/* line 113, ../_includes/stylesheets/vendors/slick-theme.scss */
+[dir="rtl"] .slick-next {
+  left: -25px;
+  right: auto;
+}
+/* line 117, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-next:before {
+  content: "→";
+}
+/* line 119, ../_includes/stylesheets/vendors/slick-theme.scss */
+[dir="rtl"] .slick-next:before {
+  content: "←";
+}
+
+/* Dots */
+/* line 127, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-slider {
+  margin-bottom: 30px;
+}
+
+/* line 131, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-dots {
+  position: absolute;
+  bottom: -45px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+}
+/* line 139, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+/* line 147, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+/* line 159, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+/* line 161, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+/* line 165, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 182, ../_includes/stylesheets/vendors/slick-theme.scss */
+.slick-dots li.slick-active button:before {
+  color: black;
+  opacity: 0.75;
+}
+
+/* Makes border-box properties */
+/* line 21, ../vendor/ruby/2.2.0/gems/susy-2.2.5/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 21, ../_includes/stylesheets/layouts/_base.scss */
+.container {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3%;
+}
+/* line 12, ../vendor/ruby/2.2.0/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 26, ../_includes/stylesheets/layouts/_base.scss */
+.container .heading {
+  text-align: center;
+}
+/* line 29, ../_includes/stylesheets/layouts/_base.scss */
+.container .heading .section-subheading {
+  color: #777777;
+  margin-top: 15px;
+  font-size: 24px;
+  text-shadow: none;
+}
+/* line 38, ../_includes/stylesheets/layouts/_base.scss */
+.container .content .section-subheading {
+  color: #777777;
+  text-shadow: none;
+}
+/* line 44, ../_includes/stylesheets/layouts/_base.scss */
+.container .primary {
+  margin-top: .2em;
+}
+
+/* line 55, ../_includes/stylesheets/layouts/_base.scss */
+.navigation {
+  text-align: center;
+}
+/* line 57, ../_includes/stylesheets/layouts/_base.scss */
+.navigation .nav a {
+  color: white;
+  display: block;
+  padding: 6px 0;
+  border: 0.2px dotted #95182d;
+  background-color: #B81E38;
+}
+/* line 63, ../_includes/stylesheets/layouts/_base.scss */
+.navigation .nav a:hover {
+  background-color: #e0425d;
+}
+
+/* line 7, ../_includes/stylesheets/layouts/_video.scss */
+#video {
+  text-align: center;
+}
+/* line 11, ../_includes/stylesheets/layouts/_video.scss */
+#video .thumbnail {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: opacity(0.35);
+  filter: opacity(0.35);
+}
+/* line 19, ../_includes/stylesheets/layouts/_video.scss */
+#video .video-slide {
+  margin-top: 20px;
+}
+/* line 23, ../_includes/stylesheets/layouts/_video.scss */
+#video .panel {
+  border: 1.2px solid #679AAB;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 5px;
+  position: relative;
+  cursor: pointer;
+}
+/* line 33, ../_includes/stylesheets/layouts/_video.scss */
+#video .description {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto auto;
+  width: 100%;
+}
+/* line 45, ../_includes/stylesheets/layouts/_video.scss */
+#video .video-date {
+  margin: 5px auto;
+  display: block;
+}
+/* line 49, ../_includes/stylesheets/layouts/_video.scss */
+#video .video-heading {
+  color: #B81E38;
+  font-size: 28.8px;
+  padding: 5px 8px;
+  font-weight: bold;
+}
+/* line 56, ../_includes/stylesheets/layouts/_video.scss */
+#video .video-subheading {
+  color: #142b44;
+  font-size: 16px;
+  padding: 1px 2px;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  line-height: 20px;
+}
+/* line 67, ../_includes/stylesheets/layouts/_video.scss */
+#video .playlists {
+  background-color: #eeeeee;
+  margin-left: -100%;
+  margin-right: -100%;
+  margin: 20px -100%;
+  padding: 20px 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }

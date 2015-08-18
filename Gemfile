@@ -2,8 +2,10 @@ source 'https://rubygems.org'
 gem 'compass'
 gem 'kramdown'
 gem 'jekyll'
-gem 'bootstrap-sass'
 gem 'animate'
+gem 'breakpoint'
+gem 'susy'
+
 
 # require 'json'
 # require 'open-uri'

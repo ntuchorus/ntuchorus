@@ -1,53 +1,53 @@
 ---
 layout: base
+
+scripts: # ordered
+  - "/js/vendors/slick.min.js"
+  - "/js/video-slider.js"
+
 styles: # ordered
   - "/css/video.css"
+
 title: 台大合唱團
 ---
 
 <!-- Video Grid Section -->
 <section id="video" >
   <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
+        <div class="heading">
                 <h2 class="section-heading">精選演出</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            </div>
+                <h3 class="section-subheading">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
-        <div class="row">
-    	    	{% for featured_video in site.data.video.featured %}
-              <!-- <div class="col-sm-6 col-xs-12 video-panel">
-                <img src="http://img.youtube.com/vi/{{ featured_video.id }}/0.jpg">
-                <div>
-                  <p> {{ featured_video.date }} </p>
-                  <h1> {{ featured_video.title }} </h1>
-                  <h2> {{ featured_video.subtitle }} </h2>
-                  
-                </div>
-              </div> -->
-            {% endfor %}
-            {% for other_video in site.data.video.others %}
-              <div class="col-sm-3 col-xs-6 video-panel">
-                <img src="http://img.youtube.com/vi/{{ other_video.id }}/0.jpg">
-                <div>
-                  <p> {{ other_video.date }} </p>
-                  <h1> {{ other_video.title }} </h1>
-                  <h2> {{ other_video.subtitle }} </h2>
+        <div class="content">
+            {% for playlist in site.data.video.playlists %}
+              <div class="playlists" >
+                <h4>{{ playlist.title }}</h4>
+                <div class="video-slide">
+                  {% for video in playlist.video %}
+                    <div class="panel">
+                      <img class="thumbnail" 
+                           src="http://img.youtube.com/vi/{{ video.id }}/hqdefault.jpg" alt="">
+                      <div class="description">
+                        <span class="video-date"> {{ video.date }} </span>
+                        <h3 class="video-heading"> {{ video.title }} </h3>
+                        <h4 class="video-subheading"> 
+                        {% for subheading in video.subtitles %}
+                        {{ subheading }} <br/>
+                        {% endfor %}
+                        </h4>
+                      </div>
+                    </div>
+                  {% endfor %}
                 </div>
               </div>
-            {% endfor %} 
+      	    {% endfor %}
         </div>
     </div>
   </div>
 </section>
 
 
-<!-- <div class="embed-responsive embed-responsive-16by9">
-  <iframe type="text/html" 
-  src="http://www.youtube.com/embed/{{ featured_video.id }}?autoplay=1&controls=0&showinfo=0&autohide=1"
-  frameborder="0"/></iframe>
-</div>
-
-<img src="http://img.youtube.com/vi/{{ featured_video.id }}/0.jpg">
- -->
- <!-- <iframe width="720" height="405" src="https://www.youtube.com/embed/?listType=playlist&list=PLAYLIST_ID" frameborder="0" allowfullscreen> -->
+<!-- <iframe type="text/html"  width="400" height="300" 
+                          src="http://www.youtube.com/embed/{{ video.id }}?modestbranding=1&autohide=1&showinfo=0&controls=0"
+                          frameborder="0"/>
+                  </iframe> -->
