@@ -1,0 +1,69 @@
+@import 'susy';
+
+$susy: (
+  /* Tells Susy to use 12 columns */
+  columns: 12,
+  /* Tells Susy that the container has a max-width of 1120px */
+  container: 1120px,
+  /* Tells Susy to use border-box */
+  global-box-sizing: border-box 
+
+);
+
+
+$small-device  : 30em;
+$medium-device : 47em;
+$large-device  : 75em;
+
+/* Makes border-box properties */
+@include border-box-sizing;
+
+.container {
+	@include container();
+	
+	padding: 3%;
+	
+	.heading {
+		text-align: center;
+
+		.section-subheading {
+			color: $gray-light;
+			margin-top: 15px;
+			@include font-size(1.5);
+			text-shadow: none;
+		}
+	}
+
+	.content {
+		.section-subheading {
+			color: $gray-light;
+			text-shadow: none;
+		}
+	}
+
+	.primary {
+	margin-top: .2em;
+	  	// @include at-breakpoint($medium-device) {
+	  	// 	@include span-columns(8,12);
+	  	// }
+	}
+
+
+}
+
+
+.navigation {
+	text-align: center;
+	.nav a {
+		color: white;
+		display: block;
+		padding: 6px 0;
+		border: 0.2px dotted darken($background-navbar,8);
+		background-color: $background-navbar;
+		&:hover {
+			background-color: lighten($background-navbar,15);
+		}
+	}
+	
+	
+}

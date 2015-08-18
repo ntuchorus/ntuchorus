@@ -1,0 +1,24 @@
+@import 'base';
+
+#help {
+
+	.content {
+
+		padding: gutter();
+
+		.subcontent {
+			@include span(3 of 6);
+				
+			display: block;
+			text-align: center;
+			&:last-child {
+				@include last;
+			}
+		
+
+		}
+
+	}
+
+	
+}

@@ -1,0 +1,9 @@
+@import 'variables';
+
+@mixin font-size($scale-value: $base-ratio) {
+  font-size: ($scale-value * $base-font-size) + px
+}
+
+@mixin line-height($scale-value: $base-ratio) {
+  line-height: ($scale-value * $base-line-height) + px
+}
