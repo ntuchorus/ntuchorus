@@ -1,4 +1,19 @@
-<!-- About Section -->
-    <section id="history">
-        {% include util/timeline.html %}
-    </section>
+<section id="history">
+  <div id="timeline">
+    <div class="container">
+          <h1>我們的歷史</h1>
+          <ul class="timeline">
+          	{% for event in site.data.history.milestone %}
+	            <li class="event" data-date="{{ event.time }}">
+	            	<h3>{{ event.title }}</h3>
+	              	<div class="description">
+	                	{% for line in event.descriptions %}
+							 <p>{{ line }} </p>
+	                	{% endfor %}
+	              	</div>
+	            </li>
+            {% endfor %}
+          </ul>
+    </div>
+  </div>
+</section>

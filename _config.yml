@@ -1,5 +1,5 @@
 url: https://y7kim.github.io
-baseurl: 
+baseurl: http://localhost:3000/
 dev: true
 
 # Site settings
@@ -13,6 +13,11 @@ color:
   secondary: fec503  
   secondary-dark: 333
   ternary: fff
+
+social:
+  facebook: https://zh-tw.facebook.com/NTUChorus
+  youtube: https://www.youtube.com/user/NTUChorus
+  google_plus: https://plus.google.com/113145450167726197942/posts
 
 # Build settings
 markdown: kramdown

@@ -501,27 +501,27 @@ table {
   border-spacing: 0;
 }
 
-/* line 12, ../_includes/stylesheets/base/_base.scss */
+/* line 13, ../_includes/stylesheets/base/_base.scss */
 html, body {
   font-family: Helvetica, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 25px;
   color: #142b44;
   background: white;
   background-image: url("../img/background-pattern2.png");
 }
 
-/* line 22, ../_includes/stylesheets/base/_base.scss */
+/* line 23, ../_includes/stylesheets/base/_base.scss */
 a {
   color: #288ad6;
   text-decoration: none;
 }
-/* line 25, ../_includes/stylesheets/base/_base.scss */
+/* line 26, ../_includes/stylesheets/base/_base.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 28, ../_includes/stylesheets/base/_base.scss */
+/* line 29, ../_includes/stylesheets/base/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Microsoft YaHei", sans-serif;
   color: #1d508d;
@@ -530,9 +530,9 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: #777777 1px 1px;
 }
 
-/* line 36, ../_includes/stylesheets/base/_base.scss */
+/* line 37, ../_includes/stylesheets/base/_base.scss */
 h1 {
-  font-size: 48px;
+  font-size: 54px;
   margin-bottom: 8px;
   border-bottom: 1px solid #777777;
   padding-top: 10px;
@@ -541,28 +541,35 @@ h1 {
   color: #010101;
 }
 
-/* line 46, ../_includes/stylesheets/base/_base.scss */
+/* line 47, ../_includes/stylesheets/base/_base.scss */
 h2 {
-  font-size: 38.4px;
+  font-size: 43.2px;
   line-height: 100%;
   letter-spacing: 2px;
   color: #142c45;
 }
 
-/* line 53, ../_includes/stylesheets/base/_base.scss */
+/* line 54, ../_includes/stylesheets/base/_base.scss */
 h3 {
-  font-size: 32px;
+  font-size: 36px;
   line-height: 100%;
   letter-spacing: 1px;
   color: #142c46;
 }
 
-/* line 61, ../_includes/stylesheets/base/_base.scss */
+/* line 62, ../_includes/stylesheets/base/_base.scss */
 h4 {
-  font-size: 24px;
+  font-size: 27px;
   line-height: 100%;
   letter-spacing: 0.8px;
   color: #152e48;
+}
+
+/* line 70, ../_includes/stylesheets/base/_base.scss */
+p {
+  line-height: 30px;
+  text-align: justify;
+  text-indent: 2 em;
 }
 
 /* Slider */
@@ -854,12 +861,13 @@ h4 {
   box-sizing: border-box;
 }
 
-/* line 21, ../_includes/stylesheets/layouts/_base.scss */
+/* line 19, ../_includes/stylesheets/layouts/_base.scss */
 .container {
-  max-width: 1120px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  padding: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 /* line 12, ../vendor/ruby/2.2.0/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
 .container:after {
@@ -867,44 +875,149 @@ h4 {
   display: block;
   clear: both;
 }
-/* line 26, ../_includes/stylesheets/layouts/_base.scss */
+/* line 28, ../_includes/stylesheets/layouts/_base.scss */
 .container .heading {
   text-align: center;
 }
-/* line 29, ../_includes/stylesheets/layouts/_base.scss */
+/* line 31, ../_includes/stylesheets/layouts/_base.scss */
 .container .heading .section-subheading {
   color: #777777;
   margin-top: 15px;
-  font-size: 24px;
+  font-size: 27px;
   text-shadow: none;
 }
-/* line 38, ../_includes/stylesheets/layouts/_base.scss */
+/* line 40, ../_includes/stylesheets/layouts/_base.scss */
 .container .content .section-subheading {
   color: #777777;
   text-shadow: none;
 }
-/* line 44, ../_includes/stylesheets/layouts/_base.scss */
+/* line 46, ../_includes/stylesheets/layouts/_base.scss */
 .container .primary {
   margin-top: .2em;
 }
 
-/* line 55, ../_includes/stylesheets/layouts/_base.scss */
+/*------------Header-------------- */
+/* line 54, ../_includes/stylesheets/layouts/_base.scss */
+header {
+  margin-bottom: 35px;
+}
+
+/* line 58, ../_includes/stylesheets/layouts/_base.scss */
 .navigation {
+  background-color: #B81E38;
   text-align: center;
 }
-/* line 57, ../_includes/stylesheets/layouts/_base.scss */
+/* line 63, ../_includes/stylesheets/layouts/_base.scss */
+.navigation .nav li {
+  border-top: 0.2px dotted #95182d;
+  border-bottom: 0.2px dotted #95182d;
+  padding: 2px 13px;
+}
+@media (min-width: 760px) {
+  /* line 63, ../_includes/stylesheets/layouts/_base.scss */
+  .navigation .nav li {
+    border-left: 0.4px solid #95182d;
+    border-right: 0.4px solid #95182d;
+  }
+}
+/* line 74, ../_includes/stylesheets/layouts/_base.scss */
 .navigation .nav a {
   color: white;
   display: block;
   padding: 6px 0;
-  border: 0.2px dotted #95182d;
-  background-color: #B81E38;
 }
-/* line 63, ../_includes/stylesheets/layouts/_base.scss */
+/* line 80, ../_includes/stylesheets/layouts/_base.scss */
 .navigation .nav a:hover {
   background-color: #e0425d;
+  text-decoration: none;
+}
+/* line 89, ../_includes/stylesheets/layouts/_base.scss */
+.navigation img {
+  width: 90%;
+  margin: 0 5%;
+  max-width: 350px;
 }
 
+/*------------Footer-------------- */
+/* line 98, ../_includes/stylesheets/layouts/_base.scss */
+footer {
+  background-color: #777777;
+  color: white;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+/* line 104, ../_includes/stylesheets/layouts/_base.scss */
+footer #copyright {
+  margin-top: 20px;
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+}
+/* line 108, ../_includes/stylesheets/layouts/_base.scss */
+footer #social {
+  width: 66.10169%;
+  float: right;
+  margin-right: 0;
+  float: right;
+  text-align: right;
+  padding-right: 2%;
+}
+/* line 113, ../_includes/stylesheets/layouts/_base.scss */
+footer #social li {
+  display: inline;
+  margin-left: 5px;
+}
+
+@media (min-width: 760px) {
+  /* line 123, ../_includes/stylesheets/layouts/_base.scss */
+  header {
+    overflow: hidden;
+    *zoom: 1;
+    height: 100px;
+    position: relative;
+  }
+
+  /* line 128, ../_includes/stylesheets/layouts/_base.scss */
+  .brand {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-top: 8px;
+  }
+
+  /* line 132, ../_includes/stylesheets/layouts/_base.scss */
+  .navigation {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    text-align: right;
+    width: 66.10169%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 138, ../_includes/stylesheets/layouts/_base.scss */
+  .navigation .nav {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    *zoom: 1;
+    float: left;
+  }
+  /* line 12, ../vendor/ruby/2.2.0/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
+  .navigation .nav:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  /* line 144, ../_includes/stylesheets/layouts/_base.scss */
+  .navigation .nav li {
+    display: inline;
+    float: left;
+    width: 100px;
+    text-align: center;
+  }
+}
 /* line 7, ../_includes/stylesheets/layouts/_video.scss */
 #video {
   text-align: center;
@@ -925,9 +1038,9 @@ h4 {
 /* line 23, ../_includes/stylesheets/layouts/_video.scss */
 #video .panel {
   border: 1.2px solid #679AAB;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
   margin: 0 5px;
   position: relative;
   cursor: pointer;
@@ -950,14 +1063,14 @@ h4 {
 /* line 49, ../_includes/stylesheets/layouts/_video.scss */
 #video .video-heading {
   color: #B81E38;
-  font-size: 28.8px;
+  font-size: 32.4px;
   padding: 5px 8px;
   font-weight: bold;
 }
 /* line 56, ../_includes/stylesheets/layouts/_video.scss */
 #video .video-subheading {
   color: #142b44;
-  font-size: 16px;
+  font-size: 18px;
   padding: 1px 2px;
   position: absolute;
   bottom: 4px;

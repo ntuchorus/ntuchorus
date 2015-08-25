@@ -1,27 +1,29 @@
 @import 'susy';
+@import 'breakpoint';
 
 $susy: (
-  /* Tells Susy to use 12 columns */
+
   columns: 12,
-  /* Tells Susy that the container has a max-width of 1120px */
-  container: 1120px,
-  /* Tells Susy to use border-box */
+
+  /* Container has a max-width of 720px */
+  container: 1000px,
+
   global-box-sizing: border-box 
 
 );
 
 
-$small-device  : 30em;
-$medium-device : 47em;
-$large-device  : 75em;
-
 /* Makes border-box properties */
 @include border-box-sizing;
 
 .container {
-	@include container();
 	
-	padding: 3%;
+	@include container();
+
+	padding-left: 3%;
+	padding-right: 3%;
+
+	
 	
 	.heading {
 		text-align: center;
@@ -42,28 +44,110 @@ $large-device  : 75em;
 	}
 
 	.primary {
-	margin-top: .2em;
-	  	// @include at-breakpoint($medium-device) {
-	  	// 	@include span-columns(8,12);
-	  	// }
+		margin-top: .2em;
 	}
-
 
 }
 
+/*------------Header-------------- */
+
+header {
+	margin-bottom: 35px;
+}
 
 .navigation {
+	background-color: $background-navbar;
 	text-align: center;
-	.nav a {
-		color: white;
-		display: block;
-		padding: 6px 0;
-		border: 0.2px dotted darken($background-navbar,8);
-		background-color: $background-navbar;
-		&:hover {
-			background-color: lighten($background-navbar,15);
+	.nav {
+		
+		li {
+			@include breakpoint($medium-device) {
+			    border-left: 0.4px solid darken($background-navbar,8);
+			    border-right: 0.4px solid darken($background-navbar,8);
+			}
+
+			border-top: 0.2px dotted darken($background-navbar,8);
+			border-bottom: 0.2px dotted darken($background-navbar,8);
+
+			padding: 2px 13px;
 		}
+		a {
+			color: white;
+			display: block;
+			padding: 6px 0;
+
+
+			&:hover {
+				background-color: lighten($background-navbar,15);
+				text-decoration: none;
+			}
+			
+		}
+
 	}
 	
+	img {
+		width: 90%;
+		margin: 0 5%;
+		max-width: 350px;
+	}
+}
+
+/*------------Footer-------------- */
+
+footer {
+	background-color: $gray-light;
+	color: white;
+	margin-top: 20px;
+	padding: 20px 0;
+
+	#copyright {
+		margin-top: 20px;
+		@include span(4);
+	}
+	#social {
+		@include span(8 last);
+		float: right;
+		text-align: right;
+		padding-right: 2%;
+		li {
+			display: inline;
+			margin-left: 5px;
+		}
+	}
+}
+
+
+@media (min-width: $medium-device) {
 	
+	header {
+		@include clearfix();
+		height: 100px;
+		position: relative;
+	}
+	.brand {
+		@include span(4);
+		margin-top: 8px;
+	}
+	.navigation {
+		position: absolute;
+		bottom: 0px;
+		right: 0;
+		text-align: right;
+		@include span(8 last);
+		.nav {
+			@include container();
+			@include clearfix();
+
+			float: left;
+
+			li {
+			 	display: inline;
+			 	float: left;
+			 	width: 100px;
+			 	text-align: center;
+			}
+		}
+		
+	}
 }
