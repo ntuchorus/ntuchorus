@@ -5,9 +5,6 @@ $susy: (
 
   columns: 12,
 
-  /* Container has a max-width of 720px */
-  container: 1000px,
-
   global-box-sizing: border-box 
 
 );
@@ -18,8 +15,19 @@ $susy: (
 
 .container {
 	
-	@include container();
+	@include container($extra-small-device-container);
+	
+	@include breakpoint($small-device) {
+		@include container($small-device-container);
+	}
 
+	@include breakpoint($medium-device) {
+		@include container($medium-device-container);
+	}
+
+	@include breakpoint($large-device) {
+		@include container($large-device-container);
+	}
 	padding-left: 3%;
 	padding-right: 3%;
 
@@ -49,6 +57,9 @@ $susy: (
 
 }
 
+.section {
+	margin-top: 20px;
+}
 /*------------Header-------------- */
 
 header {
@@ -61,14 +72,19 @@ header {
 	.nav {
 		
 		li {
-			@include breakpoint($medium-device) {
+			@include breakpoint($small-device) {
 			    border-left: 0.4px solid darken($background-navbar,8);
 			    border-right: 0.4px solid darken($background-navbar,8);
 			}
 
 			border-top: 0.2px dotted darken($background-navbar,8);
 			border-bottom: 0.2px dotted darken($background-navbar,8);
-
+			
+			&:hover {
+				background-color: lighten($background-navbar,15);
+				text-decoration: none;
+			}
+			
 			padding: 2px 13px;
 		}
 		a {
@@ -77,10 +93,7 @@ header {
 			padding: 6px 0;
 
 
-			&:hover {
-				background-color: lighten($background-navbar,15);
-				text-decoration: none;
-			}
+			
 			
 		}
 
@@ -117,9 +130,7 @@ footer {
 	}
 }
 
-
 @media (min-width: $medium-device) {
-	
 	header {
 		@include clearfix();
 		height: 100px;
@@ -151,3 +162,4 @@ footer {
 		
 	}
 }
+

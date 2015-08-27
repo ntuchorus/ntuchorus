@@ -50,9 +50,13 @@ $text-secondary: $navblue;
 
 $color-h1: black;
 
-$color-h2: lighten($darkblue, .2);
+$color-h2: lighten($darkblue, 15%);
 
-$color-h3: lighten($darkblue, .3);
+$color-h3: lighten($darkblue, 25%);
+
+$color-h4: lighten($darkblue, 35%);
+
+$color-h5: lighten($darkblue, 45%);
 
 $background-primary: white;
 
@@ -68,7 +72,7 @@ $font-primary: Helvetica, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", 
 
 $font-secondary: "Microsoft YaHei",sans-serif;
 
-$font-ternary: Arial, "全字庫正楷體", "TW-Kai", "標楷體", "BiauKai", DFKai-SB, sans-serif;
+$font-ternary: Montserrat, Arial, "全字庫正楷體", "TW-Kai", "標楷體", "BiauKai", DFKai-SB, sans-serif;
 
 // -----------------------------------------------------------------------------
 // Font Size
@@ -85,6 +89,11 @@ $default-border-radius: 8px;
 // -----------------------------------------------------------------------------
 
 
-$small-device  : 500px;
-$medium-device : 760px;
-$large-device  : 1080px;
+$small-device  : 320px;
+$medium-device : 768px;
+$large-device  : 1280px;
+
+$extra-small-device-container: 95%;
+$small-device-container: 90%;
+$medium-device-container: 88%;
+$large-device-container: 1300px;

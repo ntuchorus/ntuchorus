@@ -2,50 +2,52 @@
 layout: base
 
 scripts: # ordered
-  - "/js/vendors/slick.min.js"
-  - "/js/video-slider.js"
+  - 
+    url: "http://dimsemenov.com/plugins/royal-slider/royalslider/jquery.royalslider.min.js?v=9.3.6"
+    external: true
+  - 
+    url: "js/video-slider.js"
 
 styles: # ordered
-  - "/css/video.css"
+  - 
+    url: "http://dimsemenov.com/plugins/royal-slider/royalslider/royalslider.css"
+    external: true
+  - 
+    url: "http://dimsemenov.com/plugins/royal-slider/royalslider/skins/default/rs-default.css?v=1.0.4"
+    external: true
+  -
+    url: "css/video.css"
 
 title: 台大合唱團
 ---
 
 
 
-
 <!-- Video Grid Section -->
 <section id="video" >
   <div class="container">
-        <div class="heading">
-                <h2 class="section-heading">精選演出</h2>
-                <h3 class="section-subheading">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-        <div class="content">
-            {% for playlist in site.data.video.playlists %}
-              <div class="playlists" >
-                <h4>{{ playlist.title }}</h4>
-                <div class="video-slide">
-                  {% for video in playlist.video %}
-                    <div class="panel">
-                      <img class="thumbnail" 
-                           src="http://img.youtube.com/vi/{{ video.id }}/hqdefault.jpg" alt="">
-                      <div class="description">
-                        <span class="video-date"> {{ video.date }} </span>
-                        <h3 class="video-heading"> {{ video.title }} </h3>
-                        <h4 class="video-subheading"> 
-                        {% for subheading in video.subtitles %}
-                        {{ subheading }} <br/>
-                        {% endfor %}
-                        </h4>
-                      </div>
-                    </div>
-                  {% endfor %}
+      <div class="heading">
+        <h1>精選演出</h1>
+      </div>
+    
+      {% assign index = 1 %}
+      {% for playlist in site.data.video.playlists %}
+        <div id="playlist-{{ index }}" class="playlist">
+          <h3 class="playlist-title">{{ playlist.title }}</h3>
+          <div class="royalSlider videoGallery rsDefault">
+            {% for video in playlist.video %}
+              <a class="rsImg" data-rsVideo="https://www.youtube.com/watch?v={{ video.id }}" href="http://img.youtube.com/vi/{{ video.id }}/hqdefault.jpg">
+                <div class="rsTmb">
+                  <h5 > {{ video.title }} </h5>
+                  <span class="date"> {{ video.date }} </span>
                 </div>
-              </div>
-      	    {% endfor %}
+              </a>
+            {% endfor %}
+          </div>
         </div>
-    </div>
+      {% assign index = ( index + 1 ) %}
+      {% endfor %} 
+      
   </div>
 </section>
 

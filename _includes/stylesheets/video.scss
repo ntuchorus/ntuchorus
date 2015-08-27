@@ -1,2 +1,107 @@
-@import "base/base";         
-@import "layouts/video";  
+@import "base/base";      
+@import "layouts/base";   
+
+.playlist {
+  position: relative;
+  margin-top: 30px;
+  @include breakpoint($medium-device){
+    margin-top: 90px;
+  }
+}
+.playlist-title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: $linkblue ;
+
+  @include breakpoint($medium-device){
+    position: absolute;
+    top: -56px;
+    left: -70px;
+    display: inline;
+    z-index: 1000;
+    background-color: white;
+    padding: 12px;
+    
+
+    border: 0.7px solid $gray-light ;
+    @include border-radius(4px);
+    @include box-shadow();
+    @include rotate(-8deg);
+  }
+
+  @include breakpoint($large-device){
+    font-size: 48px;
+    padding: 20px;
+  }
+}
+
+.videoGallery {
+
+  width: 100%;
+  border: 0.8px solid $gray ;
+
+  .rsTmb {
+    padding: 20px;
+  }
+  .rsThumbs .rsThumb {
+    width: 220px;
+    height: 80px;
+    border-bottom: 1px solid #2E2E2E;
+  }
+  .rsThumbs {
+    width: 220px;
+    padding: 0;
+  }
+  .rsThumb:hover {
+    background: #000;
+  }
+  .rsThumb.rsNavSelected {
+    background-color: $brand-yellow;
+
+    h5 {
+      color: $darkblue ;
+    }
+    
+    span {
+      color: black;
+    }
+  }
+
+  .rsThumb h5 {
+    font-size: 18px;
+  }
+
+
+}
+
+
+
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .videoGallery .rsTmb {
+    padding: 6px 8px;
+  }
+  .videoGallery .rsTmb h5 {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .videoGallery .rsThumbs.rsThumbsVer {
+    width: 100px;
+    padding: 0;
+  }
+  .videoGallery .rsThumbs .rsThumb {
+    width: 100px;
+    height: 47px;
+  }
+  .videoGallery .rsTmb span {
+    display: none;
+  }
+  .videoGallery .rsOverflow,
+  .royalSlider.videoGallery {
+    height: 300px !important;
+  }
+  .sampleBlock {
+    font-size: 14px;
+  }
+}

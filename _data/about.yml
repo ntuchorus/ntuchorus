@@ -3,59 +3,63 @@ people:
   conductors:
   - name: 連芳貝
     image: ../../img/team/blank.jpg
-    identity: 指揮
+    title: 指揮
+    brief: Hi! 大家好！  我是XXX，我很喜歡台大合唱團。這是我的自我介紹…
 
   - name: 謝欣容
     image: ../../img/team/piano-companion.jpg
-    identity: 伴奏
+    title: 伴奏
+    brief: Hi! 大家好！  我是XXX，我很喜歡台大合唱團。這是我的自我介紹…
 
   - name: 董皓文
     image: ../../img/team/vice-conductor-dong.jpg
-    identity: 學生指揮
+    title: 學生指揮
+    brief: Hi! 大家好！  我是XXX，我很喜歡台大合唱團。這是我的自我介紹…
 
   - name: 紀揚今
     image: ../../img/team/vice-conductor-chin.jpg
-    identity: 學生指揮
+    title: 學生指揮
+    brief: Hi! 大家好！  我是XXX，我很喜歡台大合唱團。這是我的自我介紹…
 
   team:
   - name: 周世平
-    position: 團長
+    title: 團長
     image: ../../img/team/vice-conductor-dong.jpg
 
   - name: 洪唯康
-    position: 副團長
+    title: 副團長
     image: ../../img/team/vice-conductor-dong.jpg
 
   - name: 曾鈺雯
-    position: 副團長
+    title: 副團長
     image: ../../img/team/vice-conductor-dong.jpg
 
   - name: 蘇亭羽
-    position: 副團長
+    title: 副團長
     image: ../../img/team/vice-conductor-dong.jpg
 
   - name: 蔡柏寬
-    position: 副團長
+    title: 副團長
     image: ../../img/team/vice-conductor-dong.jpg
 
   - name: 吳承翰
-    position: 團務秘書
+    title: 團務秘書
     image: ../../img/team/vice-conductor-dong.jpg
 
   - name: 程鈺文
-    position: 團務秘書
+    title: 團務秘書
     image: ../../img/team/vice-conductor-dong.jpg
 
   - name: 卓菁莪
-    position: 團務秘書
+    title: 團務秘書
     image: ../../img/team/vice-conductor-dong.jpg
 
   - name: 黃信雯
-    position: 總務
+    title: 總務
     image: ../../img/team/vice-conductor-dong.jpg
 
   - name: 沈冠宇
-    position: 樂訓秘書
+    title: 樂訓秘書
     image: ../../img/team/vice-conductor-dong.jpg
 
 

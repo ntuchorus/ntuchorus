@@ -3,6 +3,10 @@ playlists:
   -
     title: 青春歌舞系列
     background-color: '#FFC6C6'
+    cover:
+      image: ../../img/homepage-video-background/3.jpg
+      position: right
+      color: '#ff708e'
     video:
       - 
         id: 8GFfI22F7V8
@@ -39,6 +43,10 @@ playlists:
   -
     title: 青春歌舞系列
     background-color: '#F9EAA8'
+    cover:
+      image: ../../img/homepage-video-background/2.jpg
+      position: left
+      color: '#feef6d'
     video:
       - 
         id: 8GFfI22F7V8

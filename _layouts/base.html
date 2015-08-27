@@ -9,11 +9,16 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     {% for sheet in page.styles %}
-      <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{{ sheet }}" />
+        {% if sheet.external %}
+            <link rel="stylesheet" type="text/css" href="{{ sheet.url }}" />
+        {% else %}
+            <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{{ sheet.url }}" />
+        {% endif %}
+      
     {% endfor %}
     
     <!-- Custom Fonts -->
-    <link rel="stylesheet" href="{{ "/css/vendors/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "css/vendors/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
     
 </head>
     
@@ -30,9 +35,13 @@
     </body>
         
          <!-- jQuery Version 1.11.0 -->
-        <script src="{{ "/js/vendors/jquery-1.11.3.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/vendors/jquery-1.11.3.min.js" | prepend: site.baseurl }}"></script>
 
         {% for script in page.scripts %}
-          <script src="{{ site.baseurl }}{{ script }}"></script>
+            {% if script.external %}
+                <script src="{{ script.url }}"></script>
+            {% else %}
+                <script src="{{ site.baseurl }}{{ script.url }}"></script>
+            {% endif %}
         {% endfor %}
 </html>

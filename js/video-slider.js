@@ -1,36 +1,31 @@
-
-
-$('.video-slide').slick({
-  lazyLoad: 'ondemand',
-  slidesToShow: 4,
-  speed: 300,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
+jQuery(document).ready(function($) {
+    var slider = $(".royalSlider").royalSlider({
+        arrowsNav: false,
+        fadeinLoadedSlide: true,
+        controlNavigationSpacing: 0,
+        controlNavigation: 'thumbnails',
+        thumbs: {
+          autoCenter: false,
+          fitInViewport: true,
+          orientation: 'vertical',
+          spacing: 0,
+          paddingBottom: 0
+        },
+        keyboardNavEnabled: true,
+        imageScaleMode: 'fill',
+        imageAlignCenter:true,
+        slidesSpacing: 0,
+        loop: false,
+        loopRewind: true,
+        numImagesToPreload: 3,
+        video: {
+          autoHideArrows:true,
+          autoHideControlNav:false,
+          autoHideBlocks: true
+        }, 
+        autoScaleSlider: true, 
+        autoScaleSliderWidth: 960,     
+        autoScaleSliderHeight: 450,
+        }).data('royalSlider');
+        
 });
-

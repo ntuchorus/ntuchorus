@@ -27,9 +27,7 @@ a {
 }
 
 #{headings()} {
-	font-family: $font-secondary;
-	color: $text-secondary;
-	font-weight: normal;
+	font-family: $font-ternary;
 	margin-bottom: 5px;
 	@include text-shadow($gray-light 1px 1px);
 }
@@ -37,36 +35,40 @@ a {
 h1 {
 	@include font-size(3);
 	margin-bottom: 8px;
-	border-bottom: 1px solid $gray-light;
+	border-bottom: 1px solid darken($gray-lighter,.7);
 	padding-top: 10px;
-	letter-spacing: 3px;
-	line-height: 100%;
-	color: lighten($color-h1, .2);
+	letter-spacing: 10px;
+	font-weight: bold;
+	@include line-height(3);
 }
 
 h2 {
 	@include font-size(2.4);
 	line-height: 100%;
-	letter-spacing: 2px;
-	color: lighten($color-h2, .15)
+	letter-spacing: 7px;
+	font-weight: bold;
+	color: $color-h2;
 }
 
 h3 {
 	@include font-size(2);
 	line-height: 100%;
-	letter-spacing: 1px;
-	color: lighten($color-h3, .1)
+	letter-spacing: 5px;
+	color: $color-h3;
 }
 
 
 h4 {
 	@include font-size(1.5);
 	line-height: 100%;
-	letter-spacing: 0.8px;
-	color: lighten($color-h3, .8)
+	letter-spacing: 3px;
+	color: $color-h4;
 }
 
-
+h5 {
+	letter-spacing: 1px;
+	color: $color-h5;
+}
 p {
 	@include line-height(1.2);
 	text-align: justify;

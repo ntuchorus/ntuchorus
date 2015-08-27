@@ -53,7 +53,7 @@ gulp.task('watch', function () {
 
     gulp.watch('_includes/stylesheets/**/*.scss', ['compass']);
 
-    gulp.watch(['_data/*.yml', '*.html', '*/*.html','**/**/*.html','css/*.css', '!_site/**', '!_site/*/**'], ['jekyll-rebuild']);
+    gulp.watch(['_data/*.yml', '*.html', '*/*.html','**/**/*.html','css/*.css','js/*.js', '!_site/**', '!_site/*/**'], ['jekyll-rebuild']);
 
 })
 

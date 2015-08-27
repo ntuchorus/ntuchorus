@@ -1,12 +1,114 @@
 ---
 layout: base
 
+scripts: # ordered
+  - 
+    url: "http://dimsemenov.com/plugins/royal-slider/royalslider/jquery.royalslider.min.js?v=9.3.6"
+    external: true
+  - 
+    url: "js/home.js"
+
 styles: # ordered
-  - "/css/home.css"
+  - 
+    url: "http://dimsemenov.com/plugins/royal-slider/royalslider/royalslider.css"
+    external: true
+  - 
+    url: "http://dimsemenov.com/plugins/royal-slider/royalslider/skins/default/rs-default.css?v=1.0.4"
+    external: true
+  -
+    url: "/css/home.css"
+
 title: 台大合唱團
 ---
 
-{% include help.html %}
+<section id="home">
+	<div class="container">
+		<div  class="section" id="slide">
+			<div class="royalSlider rsDefault">
+				{% for slide in site.data.homepage.frontSliders %}
+					<div>
+						<img class="rsImg" src="{{ slide.poster }}" alt="{{ slide.title }}">			
+						<!-- {% if slide.title %} -->
+							<div class="slider-body rsABlock">
+								<div class="slider-title">{{ slide.title }}</div>
+								<div class="slider-description">{{ slide.description }}</div>
+							</div>
+						<!-- {% endif %} -->
+					</div>
+				{% endfor %}
+			</div>
+		</div>	
+	
+	
+		<div class="section"  id="video">
+			<h2 class="section-title">
+				精彩歷年公演
+			</h2>
+			<div class="section-content">
+				<ul id="video-playlists">
+					{% assign index = 1 %}
+					{% for playlist in site.data.video.playlists %}
+						<a class="video-playlist {{ playlist.cover.position }}" 
+						href="{{ site.baseurl }}videos/playlist-{{ index }}"
+						style="
+							background-image: url({{ playlist.cover.image }}); 
+							color: {{ playlist.cover.color }};
+						">
+							<div class="video-playlist-content ">
+								<div class="skewed"></div>
+								<span>{{ playlist.title }}</span>
+							</div>
+						</a>
+					{% assign index = ( index + 1 ) %}
+					{% endfor %}
+				</ul>
+				</div>
+		</div>
+		<div  class="section" id="DVD">
+			<h2 class="section-title">
+				DVD
+			</h2>
+
+		</div>
+		<div class="section" id="people">
+			<h2 class="section-title">
+				指揮
+			</h2>
+			<div class="section-content">
+				{% for conductor in site.data.about.people.conductors %}
+					<article class="person">
+						
+						<div class="person-core">
+							<img class="person-image" src="{{ conductor.image }}" alt="{{ conductor.name }}">
+							<div class="person-info">
+								<h3 class="person-info-name">{{ conductor.name }}</h3>
+								<span class="person-info-title">{{ conductor.title }}</span>
+							</div>
+						</div>
+						
+							
+						<div class="person-bio">
+							<span class="tooltip"></span>
+							{{ conductor.brief }}
+						</div>				
+					</article>
+
+				{% endfor %}
+			</div>
+		</div>
+		<div  class="section" id="souvenir">
+			<h2 class="section-title">
+				紀念品
+			</h2>
+		</div>
+		<div class="section"  id="help">
+			<h2 class="section-title">
+				贊助
+			</h2>
+		</div>
+
+	</div>
+</section>
 
 
 

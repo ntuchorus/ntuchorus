@@ -1,7 +1,7 @@
 
 <header>
     <span class="brand">
-        <a href="#">
+        <a href="{{ site.baseurl }}">
             <img src="http://placehold.it/350x150" alt="NTU Chorus">
         </a> 
     </span>
@@ -9,7 +9,7 @@
             <ul class="nav">
                 {% for nav in site.data.layout.navigationBar %}
                   <li>
-                    <a href="{{ site.base_url }}{{ nav.url }}">{{ nav.title }}</a>
+                    <a href="{{ site.baseurl }}{{ nav.url }}">{{ nav.title }}</a>
                   </li>
                 {% endfor %}
             </ul>
