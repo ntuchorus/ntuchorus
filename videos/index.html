@@ -29,10 +29,9 @@ title: 台大合唱團
       <div class="heading">
         <h1>精選演出</h1>
       </div>
-    
-      {% assign index = 1 %}
+      
       {% for playlist in site.data.video.playlists %}
-        <div id="playlist-{{ index }}" class="playlist">
+        <div id="playlist-{{ playlist.title }}" class="playlist">
           <h3 class="playlist-title">{{ playlist.title }}</h3>
           <div class="royalSlider videoGallery rsDefault">
             {% for video in playlist.video %}
@@ -45,7 +44,7 @@ title: 台大合唱團
             {% endfor %}
           </div>
         </div>
-      {% assign index = ( index + 1 ) %}
+        
       {% endfor %} 
       
   </div>

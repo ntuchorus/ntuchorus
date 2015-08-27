@@ -46,10 +46,10 @@ title: 台大合唱團
 			</h2>
 			<div class="section-content">
 				<ul id="video-playlists">
-					{% assign index = 1 %}
+					{% assign position = 'right' %}
 					{% for playlist in site.data.video.playlists %}
-						<a class="video-playlist {{ playlist.cover.position }}" 
-						href="{{ site.baseurl }}videos/playlist-{{ index }}"
+						<a class="video-playlist  {{ position }}" 
+						href="{{ site.baseurl }}videos/#playlist-{{ playlist.title }}"
 						style="
 							background-image: url({{ playlist.cover.image }}); 
 							color: {{ playlist.cover.color }};
@@ -59,7 +59,11 @@ title: 台大合唱團
 								<span>{{ playlist.title }}</span>
 							</div>
 						</a>
-					{% assign index = ( index + 1 ) %}
+					{% if position == 'left' %}
+			          {% assign position = 'right' %}
+			        {% else %}
+			          {% assign position = 'left' %}
+			        {% endif %}
 					{% endfor %}
 				</ul>
 				</div>
